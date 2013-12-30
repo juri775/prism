@@ -1,7 +1,0 @@
-#!/bin/bash
-echo "usage: $0 file.xml"
-CAT=$1
-cat $CAT |sed '/<image/d' |sed '/track/d' |sed '/<trackNum/d' |sed '/playlist/d' |sed 's/^[ \t]*//' | sed '/version/d' \
-| sed 's/<location>//g' |sed 's/<\/location>//g' |sed 's/<title>/#EXTINF:-1,/g' | sed 's/<\/title>//g' \
->$CAT.m3u 
-
