@@ -1,0 +1,25 @@
+#!/bin/sh
+case "$1" in
+start)
+	/usr/local/bin/mgcamd
+	;;
+stop)
+	exec start-stop-daemon -K -R 2 -x /usr/local/bin/mgcamd
+	;;
+restart|reload)
+	$0 stop
+	sleep 3
+	$0 start
+	;;
+version)
+	echo "1.35d"
+	;;
+info)
+	echo "mgcamd 1.35d"
+	;;
+*)
+	echo "Usage: $0 start|stop|restart"
+	exit 1
+	;;
+esac
+exit 0

@@ -1,0 +1,67 @@
+
+[global]
+active = 1
+#log = /tmp/w2.log 
+log_size = 100
+debug = 3                    
+daemon = 1 
+
+[webif]
+active = 0                        
+port = 8081                    
+debug = 1
+
+[dvb]
+active = 1 
+type = DVBAPI3
+filter = dvb
+rerequest_not_decoded = 1
+auto_update = 1
+debug = 3
+
+[balancer]
+active = 1
+name = name
+mode = 4
+
+[reader]
+active = 1                                  
+name = localcard                              
+type = TuxBox 
+async_mode = 0
+device = /dev/sci0
+auto_update = 1                             
+debug = 1
+[reader]
+active = debug = 3                    
+name = active = 1
+type = debug = 1
+async_mode = 1
+account = type = DVBAPI3
+reconnect_delay = 10
+debug = 1
+emm_cache = 1 
+ecm_ttl = 5000
+
+[reader]
+active = 0      
+name = Lybid
+type = newcamd525
+async_mode = 1
+account = lybid:test1356@180.210.204.199:54321
+reconnect_delay = 10
+debug = 1
+emm_cache = 1 
+ecm_ttl = 5000
+
+                                                                                                                                                                                                                                                                                   
+[reader]
+active = 0
+name = NTV
+type = newcamd525
+async_mode = 1
+account = login:pass@server:port
+reconnect_delay = 10
+debug = 1
+emm_cache = 1 
+ecm_ttl = 5000

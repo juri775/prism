@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+	<!-- Labels -->
+	<string id="30001">Do you want start SoftCam:</string>
+	<string id="30002">Do you want stop SoftCam:</string>	
+	<string id="30003"> SoftCamKey update successful:</string>	
+</strings>

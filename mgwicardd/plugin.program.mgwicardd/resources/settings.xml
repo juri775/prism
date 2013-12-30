@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf8" standalone="yes"?>
+<settings>
+	<category label="test">
+		<setting id="AutomaticStart" type="enum" label="Automatic Start" values="Enable|Disable" default="Disable" />
+	</category> 		
+	<category label="Server 1">
+		<setting id="srv1_enable" type="bool" label="ON/OFF" default="false" />
+		<setting id="srv1_name" type="text" label="name" default="" />
+		<setting id="srv1_type" type="text" label="type" default="newcamd525" />
+		<setting id="srv1_server" type="text" label="server" default="" />
+		<setting id="srv1_port" type="text" label="port" default="" />
+		<setting id="srv1_login" type="text" label="login" default="masha" />
+		<setting id="srv1_pass" type="text" label="pass" option="hidden" default="****" />
+	</category>
+	<category label="Server 2">
+		<setting id="srv2_enable" type="bool" label="ON/OFF" default="false" />
+		<setting id="srv2_name" type="text" label="name" default="" />
+		<setting id="srv2_type" type="text" label="type" default="newcamd525" />
+		<setting id="srv2_server" type="text" label="server" default="" />
+		<setting id="srv2_port" type="text" label="port" default="" />
+		<setting id="srv2_login" type="text" label="login" default="masha" />
+		<setting id="srv2_pass" type="text" label="pass" option="hidden" default="****" />
+	</category>
+</settings>
