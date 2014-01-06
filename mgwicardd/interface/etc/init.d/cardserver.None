@@ -1,5 +1,4 @@
 #!/bin/sh
 
-/usr/local/sbin/serverdown
 exit 0
 

@@ -21,4 +21,40 @@
 		<setting id="srv2_login" type="text" label="login" default="masha" />
 		<setting id="srv2_pass" type="text" label="pass" option="hidden" default="****" />
 	</category>
+		<category label="Server 3">
+		<setting id="srv3_enable" type="bool" label="ON/OFF" default="false" />
+		<setting id="srv3_name" type="text" label="name" default="" />
+		<setting id="srv3_type" type="text" label="type" default="newcamd525" />
+		<setting id="srv3_server" type="text" label="server" default="" />
+		<setting id="srv3_port" type="text" label="port" default="" />
+		<setting id="srv3_login" type="text" label="login" default="masha" />
+		<setting id="srv3_pass" type="text" label="pass" option="hidden" default="****" />
+	</category>
+		<category label="Server 4">
+		<setting id="srv4_enable" type="bool" label="ON/OFF" default="false" />
+		<setting id="srv4_name" type="text" label="name" default="" />
+		<setting id="srv4_type" type="text" label="type" default="newcamd525" />
+		<setting id="srv4_server" type="text" label="server" default="" />
+		<setting id="srv4_port" type="text" label="port" default="" />
+		<setting id="srv4_login" type="text" label="login" default="masha" />
+		<setting id="srv4_pass" type="text" label="pass" option="hidden" default="****" />
+	</category>
+		<category label="Server 5">
+		<setting id="srv5_enable" type="bool" label="ON/OFF" default="false" />
+		<setting id="srv5_name" type="text" label="name" default="" />
+		<setting id="srv5_type" type="text" label="type" default="newcamd525" />
+		<setting id="srv5_server" type="text" label="server" default="" />
+		<setting id="srv5_port" type="text" label="port" default="" />
+		<setting id="srv5_login" type="text" label="login" default="masha" />
+		<setting id="srv5_pass" type="text" label="pass" option="hidden" default="****" />
+	</category>
+		<category label="Server 6">
+		<setting id="srv6_enable" type="bool" label="ON/OFF" default="false" />
+		<setting id="srv6_name" type="text" label="name" default="" />
+		<setting id="srv6_type" type="text" label="type" default="newcamd525" />
+		<setting id="srv6_server" type="text" label="server" default="" />
+		<setting id="srv6_port" type="text" label="port" default="" />
+		<setting id="srv6_login" type="text" label="login" default="masha" />
+		<setting id="srv6_pass" type="text" label="pass" option="hidden" default="****" />
+	</category>
 </settings>
