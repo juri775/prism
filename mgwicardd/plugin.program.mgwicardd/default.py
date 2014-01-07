@@ -78,7 +78,7 @@ def ShowSettingDialog( ) :
 			print 'cmd=%s' %cmd
 			os.system( cmd )
 		elif selectIndex == 1 :
-			cmd = os.path.join( __cwd__,'restart.sh' )
+			cmd = os.path.join( __cwd__,'restart.sh > /tmp/rest.log' )
 			print 'cmd=%s' %cmd			
 			os.system( cmd )
 		elif selectIndex == 2 :

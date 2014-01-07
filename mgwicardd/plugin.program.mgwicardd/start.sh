@@ -12,12 +12,14 @@ if [ ! -d /var/lib/softcam ]; then
 	chmod 775 /etc/init.d/cardserver.*
 	chmod 775 /usr/local/bin/wicardd
 	chmod 775 /usr/local/bin/mgcamd
+	chmod 775 /usr/local/tuxbox/config/wicardd/wicardd.conf.gen.sh
 	ln -s /etc/init.d/cardserver.wicardd /etc/init.d/cardserver
 	ln -s /etc/init.d/cardserver /config/pre-maruapp/S40cardserver
 fi
 
 touch /var/lib/softcam/running
-
+/usr/local/tuxbox/config/wicardd/wicardd.conf.gen.sh > /usr/local/tuxbox/config/wicardd/wicardd.conf
+sleep 1
 /etc/init.d/cardserver start
 
 

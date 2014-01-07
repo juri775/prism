@@ -1,11 +1,9 @@
 #!/bin/sh
 set -x
-#FILE="/home/root/.xbmc/userdata/addon_data/plugin.program.MgWicardd"
-CONFIG="./wicardd.conf.gen.conf"
-FILE=`pwd`
-#####Server 1
+FILE="/home/root/.xbmc/userdata/addon_data/plugin.program.MgWicardd"
+CONFIG="/home/root/.xbmc/addons/plugin.program.mgwicardd/resources/wicardd.conf.gen.conf"
+#FILE=`pwd`
 
-#####Server 1
 
 cat <<EOF
 [global]
@@ -23,6 +21,7 @@ port = 8081
 debug = 1
 
 EOF
+
 cat <<EOF
 [dvb]
 active = 1 
@@ -52,27 +51,10 @@ auto_update = 1
 debug = 1
 
 EOF
-#Server 1
+
 SRV=srv1
-. "${CONFIG}"
+. $CONFIG
 
-echo "######################$SRV$E#########    $enable##############"
-cat <<EOF
-[reader]
-active = $enable
-name = $name
-type = $type
-async_mode = 1
-account = $login:$pass@$server:$port
-reconnect_delay = 10
-debug = 1
-emm_cache = 1 
-ecm_ttl = 5000"
-
-EOF
-
-SRV=srv2
-. "${CONFIG}"
 
 cat <<EOF
 [reader]
@@ -88,8 +70,28 @@ ecm_ttl = 5000
 
 EOF
 
+
+SRV=srv2
+. $CONFIG
+
+cat <<EOF
+[reader]
+active = $enable
+name = $name
+type = $type
+async_mode = 1
+account = $login:$pass@$server:$port
+reconnect_delay = 10
+debug = 1
+emm_cache = 1 
+ecm_ttl = 5000
+
+EOF
+
+
 SRV=srv3
-. "${CONFIG}"
+. $CONFIG
+
 
 cat <<EOF
 [reader]
@@ -106,7 +108,7 @@ ecm_ttl = 5000
 EOF
 
 SRV=srv4
-. "${CONFIG}"
+. $CONFIG
 
 cat <<EOF
 [reader]
@@ -123,7 +125,7 @@ ecm_ttl = 5000
 EOF
 
 SRV=srv5
-. "${CONFIG}"
+. $CONFIG
 
 cat <<EOF
 [reader]
@@ -140,7 +142,7 @@ ecm_ttl = 5000
 EOF
 
 SRV=srv6
-. "${CONFIG}"
+. $CONFIG
 
 cat <<EOF
 [reader]

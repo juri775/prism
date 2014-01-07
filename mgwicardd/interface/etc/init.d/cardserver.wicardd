@@ -2,6 +2,8 @@
 
 case "$1" in
 start)
+	/usr/local/tuxbox/config/wicardd/wicardd.conf.gen.sh > /usr/local/tuxbox/config/wicardd/wicardd.conf
+	sleep 1
 	/usr/local/bin/wicardd -c /usr/local/tuxbox/config/wicardd/wicardd.conf
 	;;
 stop)
