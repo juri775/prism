@@ -53,6 +53,24 @@ debug = 1
 EOF
 
 SRV=srv1
+
+enable=`grep $SRV\_enable $FILE/settings.xml | grep -o value.* | sed 's/value="//g' | sed 's/" \/>//g' | sed 's/true/1/g' | sed 's/false/0/'`
+if [ $enable -eq 0 ]; then
+	
+cat <<EOF
+[reader]
+active = 0
+name = name
+type = type
+async_mode = 1
+account = login:pass@server:port
+reconnect_delay = 10
+debug = 1
+emm_cache = 1 
+ecm_ttl = 5000
+
+EOF
+else
 . $CONFIG
 
 
@@ -69,9 +87,26 @@ emm_cache = 1
 ecm_ttl = 5000
 
 EOF
-
+fi
 
 SRV=srv2
+enable=`grep $SRV\_enable $FILE/settings.xml | grep -o value.* | sed 's/value="//g' | sed 's/" \/>//g' | sed 's/true/1/g' | sed 's/false/0/'`
+if [ $enable -eq 0 ]; then
+	
+cat <<EOF
+[reader]
+active = 0
+name = name
+type = type
+async_mode = 1
+account = login:pass@server:port
+reconnect_delay = 10
+debug = 1
+emm_cache = 1 
+ecm_ttl = 5000
+
+EOF
+else
 . $CONFIG
 
 cat <<EOF
@@ -87,9 +122,26 @@ emm_cache = 1
 ecm_ttl = 5000
 
 EOF
-
+fi
 
 SRV=srv3
+enable=`grep $SRV\_enable $FILE/settings.xml | grep -o value.* | sed 's/value="//g' | sed 's/" \/>//g' | sed 's/true/1/g' | sed 's/false/0/'`
+if [ $enable -eq 0 ]; then
+	
+cat <<EOF
+[reader]
+active = 0
+name = name
+type = type
+async_mode = 1
+account = login:pass@server:port
+reconnect_delay = 10
+debug = 1
+emm_cache = 1 
+ecm_ttl = 5000
+
+EOF
+else
 . $CONFIG
 
 
@@ -106,8 +158,25 @@ emm_cache = 1
 ecm_ttl = 5000
 
 EOF
-
+fi
 SRV=srv4
+enable=`grep $SRV\_enable $FILE/settings.xml | grep -o value.* | sed 's/value="//g' | sed 's/" \/>//g' | sed 's/true/1/g' | sed 's/false/0/'`
+if [ $enable -eq 0 ]; then
+	
+cat <<EOF
+[reader]
+active = 0
+name = name
+type = type
+async_mode = 1
+account = login:pass@server:port
+reconnect_delay = 10
+debug = 1
+emm_cache = 1 
+ecm_ttl = 5000
+
+EOF
+else
 . $CONFIG
 
 cat <<EOF
@@ -123,8 +192,25 @@ emm_cache = 1
 ecm_ttl = 5000
 
 EOF
-
+fi
 SRV=srv5
+enable=`grep $SRV\_enable $FILE/settings.xml | grep -o value.* | sed 's/value="//g' | sed 's/" \/>//g' | sed 's/true/1/g' | sed 's/false/0/'`
+if [ $enable -eq 0 ]; then
+	
+cat <<EOF
+[reader]
+active = 0
+name = name
+type = type
+async_mode = 1
+account = login:pass@server:port
+reconnect_delay = 10
+debug = 1
+emm_cache = 1 
+ecm_ttl = 5000
+
+EOF
+else
 . $CONFIG
 
 cat <<EOF
@@ -140,8 +226,25 @@ emm_cache = 1
 ecm_ttl = 5000
 
 EOF
-
+fi
 SRV=srv6
+enable=`grep $SRV\_enable $FILE/settings.xml | grep -o value.* | sed 's/value="//g' | sed 's/" \/>//g' | sed 's/true/1/g' | sed 's/false/0/'`
+if [ $enable -eq 0 ]; then
+	
+cat <<EOF
+[reader]
+active = 0
+name = name
+type = type
+async_mode = 1
+account = login:pass@server:port
+reconnect_delay = 10
+debug = 1
+emm_cache = 1 
+ecm_ttl = 5000
+
+EOF
+else
 . $CONFIG
 
 cat <<EOF
@@ -157,3 +260,4 @@ emm_cache = 1
 ecm_ttl = 5000
 
 EOF
+fi
